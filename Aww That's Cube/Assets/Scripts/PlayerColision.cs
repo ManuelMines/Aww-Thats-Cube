@@ -13,7 +13,6 @@ public class PlayerColision : MonoBehaviour {
         {
             movement.enabled = false;
             FindObjectOfType<GameManager>().EndGame();
-            //FindObjectOfType<AudioManager>().Play("crash");
             FindObjectOfType<AudioManager>().Crashed();
         }
 
