@@ -11,7 +11,7 @@ public class PlayerColision : MonoBehaviour {
     {
         if (collisionInfo.collider.tag == "Obstacle")
         {
-            movement.enabled = false;
+            GetComponent<PlayerMovement>().enabled = false;
             FindObjectOfType<GameManager>().EndGame();
             FindObjectOfType<AudioManager>().Crashed();
         }
