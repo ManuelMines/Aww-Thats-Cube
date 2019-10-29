@@ -5,18 +5,13 @@ public class GameManager : MonoBehaviour
 {
     bool gameHasEnded = false;
 
-    public Object complete;
-
     public float restartDelay = 2f;
 
     public GameObject completeLevelUI;
 
     public void CompleteLevel()
     {
-        //FindObjectOfType<LevelComplete>().enabled = true;
-        //completeLevelUI.SetActive(true);
-        //completeLevelUI.enabled = true;
-        complete = GetComponent<LevelComplete>();
+        completeLevelUI.SetActive(true);
     }
 
     public void EndGame()

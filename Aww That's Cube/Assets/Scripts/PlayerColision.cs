@@ -4,16 +4,18 @@ public class PlayerColision : MonoBehaviour {
     
     public PlayerMovement movement;
     public Rigidbody rb;
-
+    public PlayerMovement playermovement;
+    public GameManager gamemananger;
+    public AudioManager audiomanager;
 
 
     void OnCollisionEnter (Collision collisionInfo)
     {
         if (collisionInfo.collider.tag == "Obstacle")
         {
-            GetComponent<PlayerMovement>().enabled = false;
-            FindObjectOfType<GameManager>().EndGame();
-            FindObjectOfType<AudioManager>().Crashed();
+            playermovement.enabled = false;
+            gamemananger.EndGame();
+            audiomanager.Crashed();
         }
 
     }

@@ -3,7 +3,7 @@
 public class PlayerMovement : MonoBehaviour {
 
     public Rigidbody rb;
-
+    public GameManager gamemananger;
     public float forwardForce = 2000f;
     public float sidewayForce = 1500f;
     public PlayerMovement movement;
@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour {
         if (rb.position.y < -1f)
         {
             movement.enabled = false;
-            FindObjectOfType<GameManager>().EndGame();
+            gamemananger.EndGame();
         }
     }
        

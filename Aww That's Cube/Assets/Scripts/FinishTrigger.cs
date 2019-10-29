@@ -2,10 +2,13 @@
 
 public class FinishTrigger : MonoBehaviour
 {
+    public GameManager gamemananger;
+    public AudioManager audiomanager;
+
 
     void OnTriggerEnter()
     {
-        FindObjectOfType<GameManager>().CompleteLevel();
-        FindObjectOfType<AudioManager>().Win();
+        gamemananger.CompleteLevel();
+        audiomanager.Win();
     }
 }
