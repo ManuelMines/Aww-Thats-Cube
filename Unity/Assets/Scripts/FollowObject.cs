@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class follow_player : MonoBehaviour
+public class FollowObject : MonoBehaviour
    
 {
 
-    public Transform player;
+    public Transform ObjecToFollow;
     public Vector3 offset;
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.position + offset;
+        transform.position = ObjecToFollow.position + offset;
     }
 }
