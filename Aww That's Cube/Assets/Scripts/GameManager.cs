@@ -5,16 +5,21 @@ public class GameManager : MonoBehaviour
 {
     bool gameHasEnded = false;
 
+    public Object complete;
+
     public float restartDelay = 2f;
 
     public GameObject completeLevelUI;
 
     public void CompleteLevel()
     {
-        completeLevelUI.SetActive(true);
+        //FindObjectOfType<LevelComplete>().enabled = true;
+        //completeLevelUI.SetActive(true);
+        //completeLevelUI.enabled = true;
+        complete = GetComponent<LevelComplete>();
     }
 
-    public void EndGame ()
+    public void EndGame()
     {
         if (gameHasEnded == false)
         {
@@ -22,10 +27,10 @@ public class GameManager : MonoBehaviour
             Debug.Log("GAME OVER");
             Invoke("Restart", restartDelay);
         }
-     
+
     }
 
-    void Restart ()
+    void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
