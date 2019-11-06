@@ -8,7 +8,10 @@ public class FinishTrigger : MonoBehaviour
 
     void OnTriggerEnter()
     {
-        gamemananger.CompleteLevel();
-        audiomanager.Win();
+        if (gamemananger.gameOver == false)
+        {
+            gamemananger.CompleteLevel();
+            audiomanager.Win();
+        }
     }
 }
