@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 m_EditorVersion: 2019.3.0f3
 m_EditorVersionWithRevision: 2019.3.0f3 (6c9e2bfd6f81)
+=======
+m_EditorVersion: 2019.2.11f1
+m_EditorVersionWithRevision: 2019.2.11f1 (5f859a4cfee5)
+>>>>>>> parent of abf403c... New Update Of Unity
